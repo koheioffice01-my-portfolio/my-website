@@ -1,0 +1,13 @@
+[build]
+  publish = "_site"
+  command = "npm run build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+[dev]
+  command = "npm start"
+  port = 8080

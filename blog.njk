@@ -1,0 +1,75 @@
+---
+layout: layouts/article.njk
+permalink: /blog.html
+title: "ブログ記事一覧"
+---
+<div class="blog-hero" style="margin-top: -150px; padding-top: 150px; height: 40vh; min-height: 300px; background-image: url('assets/hero_bg_kobe_osaka.png'); background-size: cover; background-position: center; position: relative; display: flex; align-items: center; justify-content: center; color: var(--white); background-attachment: fixed;">
+    <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%); z-index: 1;"></div>
+    <div class="container text-center" style="position: relative; z-index: 2;">
+        <h1 class="hero-title" style="font-size: 3.5rem; margin-top: 50px;">Real Estate <span>Blog</span></h1>
+        <p class="hero-desc" style="max-width: 600px; margin: 0 auto;">不動産のプロフェッショナル視点で、<br>購入・売却・投資の成功の秘訣をお伝えします。</p>
+    </div>
+</div>
+
+<section class="section" style="padding-top: 40px;">
+    <div class="container">
+        
+        <!-- Category 1: 購入 -->
+        <div class="blog-category reveal-up" id="category-buy">
+            <h3><i class="fas fa-home"></i> マイホームの購入</h3>
+            <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 20px;">
+                {% for post in collections.blog %}
+                    {% if "購入" in post.data.category or "マイホーム" in post.data.category %}
+                    <a href="{{ post.url }}" class="blog-card" style="background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                        <div class="blog-card-img" style="height: 200px; background: #ddd; overflow: hidden;">
+                            <img src="{{ post.data.image | default('/assets/about_img_1.png') }}" alt="{{ post.data.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="blog-card-content" style="padding: 20px;">
+                            <h4 style="font-size: 1.1rem; color: var(--bg-dark); margin-bottom: 10px;">{{ post.data.title }}</h4>
+                        </div>
+                    </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Category 2: 売却 -->
+        <div class="blog-category reveal-up" id="category-sell" style="margin-top: 60px;">
+            <h3><i class="fas fa-sign-out-alt"></i> 不動産の売却</h3>
+            <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 20px;">
+                {% for post in collections.blog %}
+                    {% if "売却" in post.data.category %}
+                    <a href="{{ post.url }}" class="blog-card" style="background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                        <div class="blog-card-img" style="height: 200px; background: #ddd; overflow: hidden;">
+                            <img src="{{ post.data.image | default('/assets/about_img_1.png') }}" alt="{{ post.data.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="blog-card-content" style="padding: 20px;">
+                            <h4 style="font-size: 1.1rem; color: var(--bg-dark); margin-bottom: 10px;">{{ post.data.title }}</h4>
+                        </div>
+                    </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Category 3: 収益物件 -->
+        <div class="blog-category reveal-up" id="category-invest" style="margin-top: 60px;">
+            <h3><i class="fas fa-building"></i> 収益物件の購入</h3>
+            <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 20px;">
+                {% for post in collections.blog %}
+                    {% if "収益物件" in post.data.category or "投資" in post.data.category %}
+                    <a href="{{ post.url }}" class="blog-card" style="background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                        <div class="blog-card-img" style="height: 200px; background: #ddd; overflow: hidden;">
+                            <img src="{{ post.data.image | default('/assets/about_img_1.png') }}" alt="{{ post.data.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="blog-card-content" style="padding: 20px;">
+                            <h4 style="font-size: 1.1rem; color: var(--bg-dark); margin-bottom: 10px;">{{ post.data.title }}</h4>
+                        </div>
+                    </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</section>

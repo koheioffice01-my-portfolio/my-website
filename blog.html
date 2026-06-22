@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ記事一覧 | 石田 幸平 ブログ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ISHIDA <span>KOHEI</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">プロフィール</a></li>
+                <li><a href="index.html#services">サービス</a></li>
+                <li><a href="blog.html" class="active">ブログ</a></li>
+                <li><a href="index.html#contact" class="btn-contact-nav">お問い合わせ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <div class="blog-hero" style="padding-top: 150px; height: 40vh; min-height: 300px; background-image: url('assets/hero_bg_kobe_osaka.png'); background-size: cover; background-position: center; position: relative; display: flex; align-items: center; justify-content: center; color: var(--white); background-attachment: fixed;">
+        <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%); z-index: 1;"></div>
+        <div class="container text-center" style="position: relative; z-index: 2;">
+            <h1 class="hero-title" style="font-size: 3.5rem; margin-top: 50px;">Real Estate <span>Blog</span></h1>
+            <p class="hero-desc" style="max-width: 600px; margin: 0 auto;">不動産のプロフェッショナル視点で、<br>購入・売却・投資の成功の秘訣をお伝えします。<br><span style="font-size: 0.8rem; color: #ffeb3b;">※こちらはローカル確認用のプレビュー画面です</span></p>
+        </div>
+    </div>
+
+    <section class="section" style="padding-top: 40px;">
+        <div class="container">
+            
+            <!-- Category 1: 購入 -->
+            <div class="blog-category reveal-up" id="category-buy">
+                <h3><i class="fas fa-home"></i> マイホームの購入</h3>
+                <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 20px;">
+                    <a href="#" class="blog-card" style="background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s; display: block;">
+                        <div class="blog-card-img" style="height: 200px; background: #ddd; overflow: hidden;">
+                            <img src="assets/about_img_1.png" alt="賃貸と持ち家、どっちがお得？生涯コストを徹底比較して見えてきた「本当の答え」" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="blog-card-content" style="padding: 20px;">
+                            <h4 style="font-size: 1.1rem; color: var(--bg-dark); margin-bottom: 10px;">賃貸と持ち家、どっちがお得？生涯コストを徹底比較して見えてきた「本当の答え」</h4>
+                        </div>
+                    </a>
+                    <a href="#" class="blog-card" style="background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s; display: block;">
+                        <div class="blog-card-img" style="height: 200px; background: #ddd; overflow: hidden;">
+                            <img src="assets/about_img_1.png" alt="マイホーム購入のベストなタイミングとは？" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="blog-card-content" style="padding: 20px;">
+                            <h4 style="font-size: 1.1rem; color: var(--bg-dark); margin-bottom: 10px;">マイホーム購入のベストなタイミングとは？年齢・ライフイベント別</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Category 2: 売却 -->
+            <div class="blog-category reveal-up" id="category-sell" style="margin-top: 60px;">
+                <h3><i class="fas fa-sign-out-alt"></i> 不動産の売却</h3>
+                <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 20px;">
+                    <a href="#" class="blog-card" style="background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s; display: block;">
+                        <div class="blog-card-img" style="height: 200px; background: #ddd; overflow: hidden;">
+                            <img src="assets/about_img_1.png" alt="家を高く売るための「査定」の仕組みと裏側" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="blog-card-content" style="padding: 20px;">
+                            <h4 style="font-size: 1.1rem; color: var(--bg-dark); margin-bottom: 10px;">家を高く売るための「査定」の仕組みと裏側</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kohei Ishida Real Estate Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
